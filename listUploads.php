@@ -91,7 +91,7 @@ $s3 = new S3Client([
     'secret'      => $secret,
     ],
 ]);
-
+/*
 $objects = $s3->getIterator('ListObjects', array(
     "Bucket" => $bucket,
     "Prefix" => $keyname
@@ -99,5 +99,20 @@ $objects = $s3->getIterator('ListObjects', array(
 
 foreach ($objects as $object) {
     echo $object['Key'] . "<br>";
+}
+*/
+
+try {
+    $results = $s3->getPaginator('ListObjects', [
+        'Bucket' => $bucket
+    ]);
+
+    foreach ($results as $result) {
+        foreach ($result['Contents'] as $object) {
+            echo $object['Key'] . PHP_EOL;
+        }
+    }
+} catch (S3Exception $e) {
+    echo $e->getMessage() . PHP_EOL;
 }
 ?>
