@@ -110,6 +110,20 @@
     background-color: #aaa !important;
   }
 
+  .show-hand {
+    cursor: pointer !important;
+  }
+
+  .noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+  }
+
   </style>
 </head>
 
@@ -135,9 +149,9 @@
       </ul>
       <ul class ="navbar-nav navbar-right">
         <li class="nav-link active">
-          <div class="custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" id="darkSwitch"/>
-            <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+          <div class="custom-control custom-switch show-hand">
+            <input type="checkbox" class="custom-control-input show-hand noselect" id="darkSwitch"/>
+            <label class="custom-control-label show-hand noselect" for="darkSwitch">Dark Mode</label>
           </div>
         </li>
       </ul>
