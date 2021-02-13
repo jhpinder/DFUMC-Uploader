@@ -101,7 +101,7 @@ background: #f3f3f3 !important;
 <body>
 
 
-<nav class="navbar navbar-expand-sm navbar-light bg-light border-bottom mb-3">
+<nav class="navbar navbar-expand-sm navbar-light bg-light mb-3">
 <a class="navbar-brand" href="#">DFUMC Virtual Choir</a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
